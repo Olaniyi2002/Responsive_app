@@ -125,7 +125,7 @@ class Mobile extends StatelessWidget {
                         ),
                       ),
                       CircleAvatar(
-                        radius: 18,
+                        radius:width/20,
                         backgroundColor: Colors.green.shade200,
                       )
 
@@ -151,7 +151,7 @@ class Mobile extends StatelessWidget {
                         ),
                       ),
                       CircleAvatar(
-                        radius: 18,
+                        radius:width/20,
                         backgroundColor: Colors.blue.shade200,
                       )
 
