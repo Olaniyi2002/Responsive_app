@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive/new/web.dart';
 
 class Mobile extends StatelessWidget {
   const Mobile({Key? key}) : super(key: key);
@@ -125,7 +126,7 @@ class Mobile extends StatelessWidget {
                         ),
                       ),
                       CircleAvatar(
-                        radius:width/20,
+                        radius:width/34,
                         backgroundColor: Colors.green.shade200,
                       )
 
@@ -151,7 +152,7 @@ class Mobile extends StatelessWidget {
                         ),
                       ),
                       CircleAvatar(
-                        radius:width/20,
+                        radius:width/34,
                         backgroundColor: Colors.blue.shade200,
                       )
 
@@ -178,15 +179,61 @@ class Mobile extends StatelessWidget {
                         ),
                       ),
                       CircleAvatar(
-                        radius:width/20,
+                        radius:width/34,
                         backgroundColor: Colors.red.shade200,
                       )
-
                     ],
                   ),
                 ],
               ),
+              SizedBox(
+                height: height/20,
+              ),
+              Container(
+                height: height / 2.5,
+                width: width,
+                padding: const EdgeInsets.all(9),
+                decoration: BoxDecoration(
+                  color: Colors.amber.shade200
+                ),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                    Stack(
+                      children: [
+                        Container(
+                        height: height / 3.5,
+                        width: width / 3,
+                        padding: const EdgeInsets.only(
+                          top: 10,
+                          bottom: 10,
+                        ),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.white,
+                          image: DecorationImage(fit: BoxFit.cover, image: AssetImage("lib/images/profile/image2.jpg")),
+                        ),
+                  ),
 
+                        Padding(
+                          padding: const EdgeInsets.only(top:150.0, left: 50),
+                          child: Container(
+                            height: height / 10,
+                            width: width / 10,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(image: AssetImage("lib/images/profile/image2.jpg")),
+                                shape: BoxShape.circle,
+                                color: Colors.transparent,
+                                border: Border.all(color: Colors.white)),
+                          ),
+                        ),
+                      ],
+                    )
+                    ],
+                  ),
+                ),
+              )
             ],
           ),
         ),
