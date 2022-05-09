@@ -133,7 +133,7 @@ class Mobile extends StatelessWidget {
                             )),
                       ),
                       CircleAvatar(
-                        radius: width == 500 ? width / 34 : width / 19.7,
+                        radius:  height /43 ,
                         backgroundColor: Colors.green.shade200,
                         child: const Icon(
                           Icons.image,
@@ -162,7 +162,7 @@ class Mobile extends StatelessWidget {
                               child: Center(
                                 child: Padding(
                                   padding: EdgeInsets.only(left: width==500?0:20.0),
-                                  child: Text(
+                                  child: const Text(
                                     "Tag People",
                                     style: TextStyle(color: Colors.blue),
                                   ),
