@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
+import 'new/changer.dart';
 import 'new/mobile.dart';
 import 'new/web.dart';
 import 'old/layout.dart';
+import 'onboard/ui.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +33,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.grey,
 
       ),
-      home: const Mobile(),
+      home: const Change(),
     );
   }
 }

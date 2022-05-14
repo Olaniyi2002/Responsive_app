@@ -9,7 +9,7 @@ class App_Bar extends StatelessWidget {
     var height = MediaQuery.of(context).size.height;
     return Container(
       padding: const EdgeInsets.only(left: 8, right: 8),
-      height: height / 10,
+      height: width>=913?height / 10:height/12,
       width: width,
       decoration: const BoxDecoration(color: Colors.white),
       child: Row(
@@ -26,8 +26,8 @@ class App_Bar extends StatelessWidget {
             width: 20,
           ),
 
-          Text("Height:${height}\n Width:${width}"),
-          Container(
+          // Text("Height:${height}\n Width:${width}"),
+       width>=913? Container(
             margin: const EdgeInsets.only(top: 15),
             width: 250,
             height: 30,
@@ -44,11 +44,12 @@ class App_Bar extends StatelessWidget {
                       borderSide: BorderSide.none,
                       borderRadius: BorderRadius.circular(30))),
             ),
-          ),
+          ):SizedBox.shrink(),
           const Spacer(),
-          SizedBox(
+          Container(
             height: height,
-            width: width / 2.7,
+            width: width>=913?width / 2.7:width / 1.2,
+
             child:  DefaultTabController(
               length: 7,
               child: TabBar(
@@ -73,11 +74,9 @@ class App_Bar extends StatelessWidget {
                         Icons.tv,
                       ),
                     ),
-                    Tab(
-                      child: CircleAvatar(
-                        radius:width/20,
-                        backgroundImage: const AssetImage("lib/images/profile/image1.jpg"),
-                      )
+                    CircleAvatar(
+                      radius:30,
+                      backgroundImage: const AssetImage("lib/images/profile/image1.jpg"),
                     ),
                     const Tab(
                       icon: Icon(

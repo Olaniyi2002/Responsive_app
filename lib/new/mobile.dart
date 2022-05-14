@@ -171,7 +171,7 @@ class Mobile extends StatelessWidget {
                         ),
                       ),
                       CircleAvatar(
-                        radius: width == 500 ? width / 34 : width / 20,
+                        radius:  height /43 ,
                         backgroundColor: Colors.blue.shade200,
                         child: Icon(
                           Icons.group,
@@ -206,7 +206,7 @@ class Mobile extends StatelessWidget {
                         ),
                       ),
                       CircleAvatar(
-                        radius: width == 500 ? width / 34 : width / 19.7,
+                        radius:  height /43 ,
                         backgroundColor: Colors.red.shade200,
                         child: const Icon(
                           Icons.videocam,
